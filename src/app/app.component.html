@@ -1,0 +1,9 @@
+<router-outlet></router-outlet>
+
+<app-testform (newNoteEvent)="addNote($event)" [name]="name"></app-testform>
+
+<ol>
+  <li *ngFor="let note of notes">{{note}}</li>
+  <span>Delete lastest note: <button (click)="deleteNote()">X</button></span>
+</ol>
+
